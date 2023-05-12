@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root{
+    --font-title: 'Bebas Neue', cursive;
+    --font-destak: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --bg-default: #111;
+    --bg-destak: #2d2d2d;
+    --font-color: #fff;
+    --font-destak: #f06;
+    font-size: 10px;
+}
+
+body{
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    color: var(--font-color);
+    background-color: var(--bg-default);
+}
+
+a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-destak);
+}
+
+header span{
+    color: var(--font-destak);
+}
+
+header h1{
+    color: var(--font-destak);
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+nav ul{
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+}
+
+nav li{
+    list-style: none;
+    margin: 0 1rem;
+}
+
+nav li:last-child {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.hero {
+    height: 20rem;
+    position: relative;
+}
+
+.hero::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url("https://www.themoviedb.org/t/p/original/nvMoOlC7HHZ9U4WknwwGOVefvnI.jpg");
+    position: absolute;
+    background-size: cover;
+    z-index: -1;
+    filter: opacity(.5);
+    box-shadow: inset 0 -100px 100px var(--bg-default);
+}
+
+.hero p{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 3.6rem;
+    text-shadow: 0px 4px 4px #000000;
+    padding: 3rem 2rem;
+}
+
+input[type="text"], input[type="number"]{
+    background-color: var(--bg-destak);
+    font-size: 1.5rem;
+    color: #FFF;
+    padding: .4rem;
+    border-radius: 3px;
+}
+
+h2{
+    border-left: 4px solid var(--font-destak);
+    padding-left: 5px;
+    margin: 5px;
+}
+
+.secao-filmes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 140px;
+    background-color: var(--bg-destak);
+    text-align: center;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+.card img{
+    width: 140px;
+    border-radius: 7px;
+}
+
+.card .nota{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .nota .estrela{
+    color: gold;
+}
+
+.botão{
+    background-color: var(--font-destak);
+    padding: .5rem 1.5rem ;
+    border-radius: 5px;
+    margin: .5rem 2rem;
+    transition: box-shadow .5s ease-in-out;
+    color: #FFF;
+    box-shadow: 0 0 20px #FFF;
+}
+
+
+.botao:hover{
+    box-shadow: 0 0 20px #FFF;
+    
+}
+#st{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:240%;
+    height: 100%;
+}
+
+
+@media (min-width: 1440px) {
+    .hero {height: 30rem;}
+}
+
+@media (max-width: 375px) {
+    header {flex-direction:column;}
+}
